@@ -3,9 +3,23 @@ a {
   }
  
 .content-container {
+    margin-top: 2.25rem;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+    display: flex;
   }
+
+.emergency-container {
+  padding: 0rem 1rem 0 0;
+}
+
+.crisis-statement {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  margin-left: 1rem;
+  width: 142%;
+}
 
 .category-name {
     padding: 0;
@@ -27,10 +41,22 @@ a {
     display: inline;
   }
 
+  .content-container {
+    margin-top: 0;
+  }
+
+  .emergency-container {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+
   .how-to-call {
     display: inline;
     margin: 1.5rem 0 0 1rem;
     }
+  
+  .crisis-statement {
+    width: 96%;
+  }
 }  
 
 /* begin tablet styles */
