@@ -339,9 +339,13 @@ main {
 }
 
 @media screen and (max-width: 1400px) {
-
+/* description is a class to style the text "Human Services Resource Directory"  */
   .description {
     display: none;
+  }
+
+  .main {
+    columns: auto;
   }
 }
 
@@ -355,35 +359,34 @@ main {
     right: 2.5rem;
   }
 
-  .menu-icon {
+  .main {
+    columns: auto;
+  }
+
+  .category-name > a {
+    display: block;
+    color: #308DF8;
+    background-color: transparent;
+    font-weight: bold;
+    padding: .5rem 0 .7rem;
+    font-size: 1.25rem;
+    transition: 0.3s color ease-in-out;
+    margin-right: 1rem;
+}
+
+  .subcategory {
     display: none;
   }
 
-  .menu-lines {
-    margin-left: -2rem;
-    margin-right: 1rem;
-  }
-
-  .hamburger {
-    width: 35px;
-    height: 6px;
-    background-color: rgb(126, 126, 126);
-    border-radius: 2.5px;
-    margin: 5.5px 0 0 10.5px;
-  }
 }
 
 /* end desktop styles */
-
-.mobile-container {
-  display: none;
-}
 
 /* responsive transition to tablet */
 
 @media screen and (max-width: 1056px) {
 
-  .mobile-container {
+  /* .mobile-container {
     display: inline;
   }
 
@@ -487,34 +490,19 @@ main {
     display: inline;
     font-size: 1.45rem;
     font-weight: bold;
-  }
+  } */
 }
 
 /* begin tablet styles */
 
 @media screen and (max-width: 770px) {
 
-  .mobile-container {
-    display: inline;
-  }
-
-  .container {
-    display: none;
-  }
-
-  header {
-    padding-top: 0;
-  }
-
-  header .logo-title {
-    display: flex;
-  }
 }
 
 /* begin mobile styles */
 
 @media screen and (max-width: 640px) {
-
+/* 
   header {
     height: 5rem;
   }
@@ -567,286 +555,5 @@ main {
 
   footer .bold-inline {
     font-size: 1.2rem;
-  }
-}
-
-/* begin tablet styles for the mobile-intro screen that appears after pressing Find Help */
-
-@media screen and (max-width: 1056px) {
-
-  .logo-title {
-    display: flex;
-  }
-
-  .back-arrow {
-    color: white;
-    display: flex;
-    margin-left: auto;
-    font-family: sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 1.9rem;
-    margin-right: 3.5rem;
-  }
-
-  .mobile-are-you-in-crisis {
-    font-style: normal;
-    font-family: sans-serif;
-    font-size: 4.5rem;
-    font-weight: bold;
-    margin: 6.2rem 0 0 3.5rem;
-  } 
-
-  .blue-text {
-    color: #086CDD;
-  }
-  
-  /* pop-up container */
-  .mobile-popup {
-    position: relative;
-    display: inline-block;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* the actual pop-up */
-  .mobile-popup .mobile-popuptext {
-    visibility: hidden;
-    width: 280%;
-    background-color: #f5f5f5;
-    color: #6a6a6a;
-    border-radius: 6px;
-    padding: 1rem 1.25rem 9.3rem 0.1rem;
-    position: absolute;
-    z-index: 1;
-    bottom: -845%;
-    right: -19%;
-    margin-left: -80px;
-    font-family: sans-serif;
-    font-weight: normal;
-    font-size: 1.5rem;
-    line-height: 2.8rem;
-  }
-  
-  /* toggle this class - hide and show the pop-up */
-  .mobile-popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* add animation (fade in the pop-up) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-
-  /* end pop-up styles */
-  .outline-buttons {
-    display: flex;
-    flex-direction: column;
-    margin: 19% 3.5rem 4rem;
-  }
-
-  .emergency-lines-button, .find-my-city-button, .find-a-service-button {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    background-color: transparent;
-    border-style: solid;
-    border-radius: 10px;
-    height: 9rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    padding-left: 2rem;
-    max-width: 36rem;
-  }
-
-  .emergency-lines-button {
-    width: 36rem;
-  }
-
-} /* end tablet styles for screen that appears after pressing Find Help */
-
-/* begin styles for the Find Help mobile screen */
-
-@media screen and (max-width: 640px) {
-
-  .back-arrow {
-    font-size: 2rem;
-    margin-top: 1.6rem;
-    margin-right: 2.2rem;
-  }
-
-  .mobile-are-you-in-crisis {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin: 3.5rem 0 0 2rem;
-  }
-
-  /* pop-up container */
-  .mobile-popup {
-    position: relative;
-    display: inline-block;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  /* crisis pop-up */
-  .mobile-popup .mobile-popuptext {
-    visibility: hidden;
-    background-color: #f5f5f5;
-    color: #6a6a6a;
-    width: 20.3rem;
-    padding: 0 0.85rem 0.5rem 0.6rem;
-    bottom: -31rem;
-    right: -17.3%;
-    font-family: sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 2.1rem;
-  }
-  
-  /* toggle this class - hide and show the pop-up */
-  .mobile-popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-  }
-  
-  /* add animation (fade in the pop-up) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  } 
-  /* end popup styles */
-
-  .outline-buttons {
-    margin: 25% 1.5rem 0;
-  }
-
-  .emergency-lines-button, .find-my-city-button, .find-a-service-button {
-    height: 6.8rem;
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-    padding-left: 5.8%; 
-    max-width: 20.2rem;
-  }
-
-  .emergency-lines-button {
-    width: 20.2rem;
-  }
-}
-
-/* begin tablet styles for the screen that appears when someone clicks the "Find a Service" button */
-
-@media screen and (max-width: 1056px) {
-  .mobile-category-buttons {
-    padding: 1.5rem 0.5rem 0 1rem;
-  }
-
-  .mobile-category-name {
-    padding: 1rem;
-  }
-
-  .bottom-line {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .more-button {
-    color: gray;
-  }
-
-  .more-arrow {
-    font-size: 1.8rem;
-    margin-left: .3rem;
-  }
-}
-
-/* begin mobile styles for most-sought category intro screen, this appears after pressing the "Find a Service" button */
-
-@media screen and (max-width: 640px) {
-
-  .mobile-category-buttons {
-    padding: 1.5rem 0.5rem 0 1rem;
-  }
-
-  .mobile-category-name {
-    padding: 1rem;
-  }
-
-  .bottom-line {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .more-button {
-    color: gray;
-  }
-
-  .more-arrow {
-    font-size: 1.8rem;
-    margin-left: .3rem;
-  }
-
-} /* end mobile styles for Find a Service intro screen */
-
-
-/* begin mobile and tablet styles for the Emergency Crisis Lines */
-
-.how-to-call {
-  margin: 1.5rem 0 0 1.5rem;
-  font-weight: bold;
-  font-size: 1.7rem;
-  color: gray;
-}
-
-.emergency-container {
-  padding: 1.5rem 1rem 0 1rem;
-}
-
-.emergency-line {
-  padding: 0.5rem 0 0.5rem 0;
-  background-color: white;
-  margin-bottom: 1.8rem;
-}
-
-.emergency-number {
-  padding: .5rem;
-  padding-left: 0.8rem;
-}
-
-.emergency-description {
-  padding: 0 0.5rem 0 0.8rem;
-  margin-top: 0.5rem;
-  line-height: 1.5rem;
-}
-
-.divider-line {
-  background-color: #f5f5f5;
-  height: 0.5rem;
-  margin: 0.5rem 0;
-}
-/* end mobile styles for the page of Emergency Crisis Lines */
-
-/* begin mobile styles for list of cities page */
-
-.mobile-city-list {
-  padding: 1.5rem 0.5rem 0 1rem;
+  } */
 }
