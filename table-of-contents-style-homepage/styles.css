@@ -344,7 +344,7 @@ main {
     display: none;
   }
 
-  .main {
+  main {
     columns: auto;
   }
 }
